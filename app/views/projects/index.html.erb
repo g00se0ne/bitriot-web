@@ -1,0 +1,14 @@
+<%= page_title page_title: 'Work' %>
+<% content_for :hero do %>
+  <div class="hero-container">
+    <div class="hero-image" style="background-image: url('<%= image_path('gfx-imac.jpg') %>');"></div>
+  </div>
+  <div class="hero-blurb">
+    <h1>We Help Startups <span>Succeed</span></h1>
+    <p>Our team has been involved with dozens of early stage startups. Our expertise will help make your idea come to life.</p>
+  </div>
+<% end %>
+
+<div class="project-list">
+  <%= render partial: 'show', collection: @projects, as: :project, locals: {landing: false} %>
+</div>

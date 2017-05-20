@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-plan</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-110.390385%" y1="-116.38381%" x2="194.898077%" y2="201.077143%" id="linearGradient-1">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="10.2958904%" y1="8.75%" x2="445.227397%" y2="459.201351%" id="linearGradient-2">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-178.788525%" y1="-223.48871%" x2="341.703279%" y2="314.146774%" id="linearGradient-3">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-117.876712%" y1="-124.041892%" x2="317.054795%" y2="326.408108%" id="linearGradient-4">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-241.080822%" y1="-255.587671%" x2="193.850685%" y2="201.034247%" id="linearGradient-5">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-339.560274%" y1="-359.172603%" x2="95.3712329%" y2="97.4479452%" id="linearGradient-6">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-27.9452055%" y1="-11.4678322%" x2="117.031963%" y2="105.082517%" id="linearGradient-7">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Homepage-Josh" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-3-Copy" transform="translate(-161.000000, -1624.000000)" fill-rule="nonzero">
+            <g id="3-Up" transform="translate(101.000000, 1579.000000)">
+                <g id="ic-plan" transform="translate(60.000000, 45.000000)">
+                    <path d="M5.77777778,39.3333333 C2.55555556,39.3333333 0,36.6666667 0,33.4444444 C0,30.2222222 2.55555556,27.6666667 5.77777778,27.6666667 C9,27.6666667 11.5555556,30.2222222 11.5555556,33.4444444 C11.4444444,36.6666667 8.88888889,39.3333333 5.77777778,39.3333333 Z M5.77777778,29.3333333 C3.55555556,29.3333333 1.66666667,31.2222222 1.66666667,33.4444444 C1.66666667,35.6666667 3.44444444,37.5555556 5.77777778,37.5555556 C8.11111111,37.5555556 9.88888889,35.6666667 9.88888889,33.4444444 C9.77777778,31.2222222 8,29.3333333 5.77777778,29.3333333 Z" id="Shape" fill="url(#linearGradient-1)"></path>
+                    <polygon id="Shape" fill="url(#linearGradient-2)" points="7.33333333 8.22222222 0.444444444 1.22222222 1.66666667 0 8.55555556 7"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-2)" points="1.66666667 8.22222222 0.444444444 7 7.33333333 0 8.55555556 1.22222222"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-3)" points="35.1111111 8.77777778 33.4444444 8.77777778 33.4444444 3.55555556 28.3333333 3.55555556 28.3333333 1.88888889 35.1111111 1.88888889"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-4)" points="13.4444444 23.2222222 6.55555556 16.2222222 7.77777778 15 14.6666667 22"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-4)" points="7.77777778 23.2222222 6.55555556 22 13.4444444 15 14.6666667 16.2222222"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-5)" points="38.1111111 19.6666667 31.2222222 12.6666667 32.4444444 11.5555556 39.3333333 18.5555556"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-5)" points="32.4444444 19.6666667 31.2222222 18.5555556 38.1111111 11.5555556 39.3333333 12.6666667"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-6)" points="35.5555556 38.1111111 28.6666667 31.1111111 29.8888889 30 36.7777778 37"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-6)" points="29.8888889 38.1111111 28.6666667 37 35.5555556 30 36.7777778 31.1111111"></polygon>
+                    <path d="M10.7777778,33.8888889 L10.4444444,32.2222222 L14.4444444,31.5555556 C18.4444444,30.8888889 21.3333333,27.4444444 21.3333333,23.3333333 L21.3333333,17.5555556 C21.3333333,14.5555556 22.4444444,12.2222222 25.3333333,9.44444444 L33.6666667,2.11111111 L34.7777778,3.33333333 L26.4444444,10.6666667 C24,13.1111111 23,15 23,17.4444444 L23,23.3333333 C23,28.2222222 19.5555556,32.3333333 14.7777778,33.2222222 L10.7777778,33.8888889 Z" id="Shape" fill="url(#linearGradient-7)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

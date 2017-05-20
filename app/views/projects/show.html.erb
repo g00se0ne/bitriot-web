@@ -1,0 +1,54 @@
+<%= page_title page_title: @project_show.name %>
+<% content_for :hero do %>
+  <div class="hero-container">
+    <div class="hero-image project-hero" style="background-image: url('<%= @project_show.hero_image.url %>');"></div>
+    <div class="hero-blurb">
+      <h1><%= @project_show.name %></h1>
+      <p><%= @project_show.subtitle %></p>
+    </div>
+  </div>
+<% end %>
+
+
+<section class="what">
+  <div class="container">
+    <div class="what-image">
+      <%= image_tag @project_show.primary_image %>
+    </div>
+    <div class="what-text">
+      <div class="blurb">
+        <h2>What We Did</h2>
+        <p><%= @project_show.what %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'projects/package', package: @project_show.package if @project_show.package.present? %>
+
+<section class="how">
+  <div class="container">
+    <div class="how-text">
+      <div class="blurb">
+        <h2>How We Did It</h2>
+        <p><%= @project_show.how %></p>
+        <% unless @project_show.technologies.empty? %>
+          <h3>Technologies</h3>
+          <div class="technologies">
+            <%= render @project_show.technologies %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="how-image" style="background-image: url('<%= @project_show.secondary_image.url %>');"></div>
+</section>
+
+<div class="grey-module">
+  <section class="home-module">
+    <h2>Other Projects</h2>
+    <div class="works">
+      <%= render @project_show.projects %>
+    </div>
+  </section>
+</div>

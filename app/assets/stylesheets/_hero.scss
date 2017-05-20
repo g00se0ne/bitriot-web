@@ -1,0 +1,178 @@
+.hero-wrapper {
+  height: 500px;
+  position: relative;
+
+  .hero {
+    @include position(absolute, 0 null null 0);
+    @include size(100%);
+    background: linear-gradient(120deg, $hero-start, $hero-end);
+    text-align: center;
+
+    .btn {
+      @include position(absolute, nul null 3% 50%);
+      color: $white;
+      transform: translateX(-50%);
+      z-index: 3;
+    }
+
+    .lockup {
+      @include position(absolute, null null -40px 50%);
+      transform: translateX(-50%) translateY(20%);
+      max-width: 900px;
+      width: 90%;
+      z-index: 2;
+    }
+
+    .video-wrapper {
+      @include position(absolute, 0 null null 0);
+      @include size(100%);
+      overflow: hidden;
+    }
+
+    video {
+      @include position(absolute, 50% 0 0 50%);
+      @include size(110%, auto);
+      background-size: cover;
+      opacity: 0.1;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  .hero-image {
+    @include position(absolute, 0 null null 0);
+    @include size(100%);
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 1;
+    animation: hero-zoom 6s forwards;
+  }
+
+  .hero-container {
+    @include position(absolute, 0 0 0 0);
+    @include size(100%, 100%);
+    overflow: hidden;
+  }
+
+  .hero-blurb {
+    @include position(absolute, 50% 0 null 0);
+    @include size(100%, auto);
+    transform: translateY(-50%);
+    z-index: 1;
+
+    h1,
+    p {
+      color: white;
+    }
+
+    p {
+      opacity: 0.8;
+    }
+  }
+
+  &.homepage-hero {
+    .hero-blurb {
+      display: none;
+    }
+  }
+
+  &.landing-hero {
+    height: 400px;
+
+    &.blue {
+      .hero {
+        background: linear-gradient(120deg, #043D5A, #10C8D5);
+      }
+    }
+
+    .hero {
+      background: linear-gradient(120deg, $landing-hero-start, $landing-hero-end);
+    }
+
+    .hero-blurb {
+      h1 {
+        text-transform: capitalize;
+      }
+    }
+
+    .san-jose-landing-lockup {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      transform: translateX(-50%);
+      opacity: 0.6;
+
+      &.reflect {
+        transform: scale(1, -1);
+        margin-left: -50%;
+        top: 399px;
+        opacity: 0.2;
+        z-index: -1;
+      }
+    }
+
+    .landing-lockup {
+      position: absolute;
+      top: 298px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include media($mobile) {
+      height: 280px;
+
+      .landing-lockup {
+        top: 206px;
+        width: 300px;
+      }
+
+      .hero-blurb {
+        margin-top: -15px;
+      }
+      .san-jose-landing-lockup {
+        &.reflect {
+          top: 279px;
+        }
+      }
+    }
+  }
+
+  @include media($mobile) {
+    height: 300px;
+
+    &.homepage-hero {
+      .hero-blurb {
+        display: block;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .hero {
+        .lockup {
+          display: none;
+        }
+
+        .btn {
+          display: none;
+        }
+      }
+    }
+
+    .hero-blurb {
+      padding: 0 5%;
+      margin-top: 30px;
+    }
+  }
+}
+
+@-webkit-keyframes hero-zoom {
+    0% {
+        transform: scale(1.05) rotate(0.5deg);
+    }
+    100% {
+
+        transform: scale(1.08) rotate(0deg);
+    }
+
+}

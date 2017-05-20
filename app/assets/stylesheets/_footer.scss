@@ -1,0 +1,117 @@
+footer {
+  background: $dark-gray;
+  display: flex;
+  font-family: $heading-font-family;
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  padding: 20px 5%;
+
+  .left-header {
+    nav {
+      line-height: 48px;
+
+      @include media($mobile) {
+        display: none;
+      }
+    }
+  }
+
+  .brand {
+    margin-top: 5px;
+    margin-right: $small-spacing;
+  }
+
+  .social-icons {
+    padding-top: 10px;
+
+    img {
+      margin-left: 10px;
+      transition: opacity 500ms ease;
+      opacity: .2;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.sub-footer {
+  background: lighten($dark-gray, 5%);
+  padding: $small-spacing / 2;
+  text-align: center;
+  border-bottom: 5px solid $hero-end;
+
+  p {
+    margin-bottom: 0;
+    color: $medium-gray;
+    font-size: 11px;
+    font-family: $heading-font-family;
+    text-transform: uppercase;
+  }
+}
+
+.subscribe {
+  background: linear-gradient(120deg, $hero-start, #1d9ad7);
+  padding: $base-spacing 0 ($base-spacing * 2);
+
+  h2 {
+    text-transform: none;
+    font-family: $base-font-family;
+    color: white;
+    text-align: center;
+    margin-bottom: $base-spacing;
+  }
+
+  .inline-form {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+
+    ::placeholder {
+      color: white;
+    }
+
+    input[type=text] {
+      flex: 1;
+      border: none;
+      background: rgba($white, 0.2);
+      transition: background 500ms ease;
+      color: white;
+
+      &:hover {
+        background: rgba($white, 0.3);
+      }
+
+      &:active,
+      &:focus {
+        background: rgba($white, 0.5);
+      }
+    }
+
+    .btn {
+      width: 150px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    @include media($mobile) {
+      display: block;
+      width: 100%;
+
+      input[type=text],
+      .btn {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+body.no-subscribe {
+  .subscribe {
+    display: none;
+  }
+}

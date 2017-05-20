@@ -1,0 +1,68 @@
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+
+// Typography
+$base-font-family: "Sorts Mill Goudy", serif;
+$heading-font-family: 'Montserrat', sans-serif;
+
+// Font Sizes
+$base-font-size: 18px;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 0;
+$base-spacing: 30px;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #00adef;
+$black: #000;
+$dark-gray: #393939;
+$medium-gray: #969696;
+$light-gray: #e0e0e0;
+$white: #fff;
+$hero-start: #1670ab;
+$hero-end: #823876;
+$pink: #EB3875;
+$landing-hero-start: #e82e4d;
+$landing-hero-end: #ee4d94;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $blue;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: $white;
+$secondary-background-color: #f6f6f6;
+
+// Forms
+$box-shadow-color: rgba(#000, 0.06);
+$form-box-shadow: none;
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 300ms;
+$base-timing: ease;
+$base-transition: all $base-duration $base-timing;
+
+// Shadows
+$soft-shadow-color: rgba(#000, 0.2);
+$soft-shadow: 0 6px 16px rgba($black, 0.1);
+
+$what-height: 460px;
+$how-height: 650px;
+
+$mobile: new-breakpoint(max-width 769px);
+$large: new-breakpoint(max-width 1000px);
+$above-mobile: new-breakpoint(min-width 770px);
+$full-screen: new-breakpoint(max-width 1401px);
+

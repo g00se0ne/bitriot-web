@@ -1,0 +1,99 @@
+@mixin btn($btn-foreground, $btn-background, $shade-factor: 20%, $shade-method: tranparent) {
+  color: $btn-foreground;
+  background: $btn-background;
+
+  &:hover,
+  &:focus {
+    color: $btn-foreground;
+    @if $shade-method == transparent {
+      background: transparentize($btn-background, $shade-factor);
+    } @else {
+      background: shade($btn-background, $shade-factor);
+    }
+  }
+}
+
+.btn {
+  appearance: none;
+  background-color: $blue;
+  border: 0;
+  border-radius: $base-border-radius;
+  // box-shadow: 0 4px transparentize($blue, 0.8);
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: ($small-spacing * 1.5) ($base-spacing * 1.5);
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing, color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  $white-space: nowrap;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 1000px;
+    height: 220px;
+    top: 150px;
+    left: -50px;
+    transform: rotate(10deg);
+    background: transparentize($blue, 0.8);
+    transition: top $base-duration $base-timing;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: shade($blue, 10%);
+    color: $white;
+
+    &:before {
+      top: -10px;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &-transparent {
+    @include btn($white, transparentize($white, 0.8), 10%, shade);
+  }
+
+  &-hollow {
+    background: transparent;
+    border: 2px solid $blue;
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      border-color: shade($blue, 10%);
+      color: shade($blue, 10%);
+    }
+  }
+
+  &-dark {
+    background: $dark-gray;
+    color: white;
+
+    &:hover {
+      background: lighten($dark-gray, 5%);
+    }
+  }
+
+  &.btn-full {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+}

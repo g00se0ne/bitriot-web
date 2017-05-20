@@ -1,0 +1,190 @@
+$service-height: 450px;
+
+.service {
+  overflow: hidden;
+  height: $service-height;
+  position: relative;
+  background-color: $secondary-background-color;
+  background-position: 50% 0;
+
+  &-text {
+    @include span-columns(6);
+    @include stack();
+    height: $service-height;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 30px;
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  &.service-team {
+    .service-text {
+      @include shift(3);
+    }
+  }
+
+  .blurb {
+    position: relative;
+
+    img.numeral {
+      @include position(absolute, -40px 0 0 -60px);
+      opacity: 0.2;
+    }
+  }
+
+  &:nth-child(odd) {
+    .service-icons {
+      span {
+        left: 260px;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    background-color: white;
+
+    .service-text:not(.last-service-text) {
+      @include shift(6);
+    }
+
+    .service-icons {
+      @include span-columns(5);
+      @include shift(-12);
+      @include stack();
+    }
+  }
+
+  &:first-child,
+  &:last-child {
+    background-image: none !important;
+  }
+
+  &:last-child {
+    height: auto;
+    padding-bottom: $base-spacing * 2;
+
+    .service-text {
+      padding: ($base-spacing * 3) 0 $base-spacing;
+      height: auto;
+    }
+
+    .service-icon {
+      z-index: 2;
+      top: 160px;
+    }
+
+    .container {
+      height: auto;
+      position: relative;
+    }
+
+    .works {
+      width: 100%;
+    }
+
+    &:after {
+      @include position(absolute, 0 null null 50%);
+    }
+  }
+
+  @include media($mobile) {
+    height: auto;
+    padding: ($base-spacing * 2) 0 $base-spacing;
+
+    .container {
+      height: auto;
+    }
+
+    .service-text {
+      height: auto;
+      padding-top: 0;
+
+      .blurb {
+        img.numeral {
+          @include position(absolute, -60px 0 auto auto);
+          opacity: 0.1;
+        }
+      }
+    }
+
+    &:last-child {
+      display: none;
+    }
+
+    .service-icons {
+      padding-top: 0;
+    }
+  }
+
+  .service-icons,
+  .service-text {
+    @include stack();
+  }
+}
+
+.users {
+  @include row();
+
+  .user {
+    @include span-columns(2.4);
+    @include omega(5n);
+    position: relative;
+    margin-bottom: 10px;
+
+    img {
+      filter: grayscale(0);
+      display: block;
+      transition: filter 500ms ease;
+      border-radius: 100px;
+    }
+
+    &:after {
+      @include position(absolute, 0 0 0 0);
+      @include size(100%, 100%);
+      content: '';
+      background: linear-gradient(120deg, $hero-start, $hero-end);
+      opacity: 0.4;
+      z-index: 2;
+      transition: opacity 500ms ease;
+      border-radius: 100px;
+    }
+
+    &:hover {
+      img {
+        filter: grayscale(0);
+      }
+
+      &:after {
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
+.service-icons {
+  padding-top: 170px;
+  .technologies {
+    .tech {
+      height: 120px;
+      text-align: center;
+      margin-right: $base-spacing;
+
+      &__title {
+        bottom: auto;
+        top: 100px;
+      }
+
+      img {
+        height: 80px;
+      }
+    }
+  }
+}

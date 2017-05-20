@@ -1,0 +1,75 @@
+<%= page_title full_page_title: 'Bit Riot: Ruby on Rails, iOS, JavaScript design / development consultancy.' %>
+<% content_for :hero_class, 'homepage-hero' %>
+
+<% content_for :hero do %>
+  <div class="hero-container">
+    <div class="hero-image" style="background-image: url('<%= image_path('home/hero-walking.jpg') %>');"></div>
+  </div>
+
+  <div class="hero-blurb">
+    <h1>Insert<br>Gamechanger<br>Here</h1>
+  </div>
+
+  <%= link_to 'Start Your Project', '##', class: 'btn btn-transparent' %>
+  <%= image_tag 'gfx-hero-lockup.svg', class: 'lockup' %>
+<% end %>
+
+<div class="home-team">
+  <section class="home-module">
+    <div class="container">
+      <h2>Meet Your Core Team</h2>
+      <div class="users">
+        <%= render User.all %>
+      </div>
+    </div>
+
+    <p>We're a scrappy, distributed team who understand what it takes to get a startup off the ground. Our team has been essential on dozens of launches. <%= link_to 'What can we help you build?', new_contact_path %></p>
+  </section>
+</div>
+
+<div class="technologies-container-home">
+  <div class="code-bg"></div>
+  <section class="home-module">
+    <h2>Technology Focused, Strategy Driven</h2>
+    <div class="technologies flex--technologies">
+      <%= render Technology.all %>
+    </div>
+  </section>
+</div>
+
+<section class="home-module services-module">
+  <div class="row">
+    <div class="home-service-box">
+      <%= image_tag 'home/ic-plan.svg' %>
+      <h3>A Gameplan for Success</h3>
+      <p>We’ll help validate and refine your concept from the start of our engagement to minimize risk. User testing and design sprints are a few of the tools we use to ensure the right product for your users.</p>
+    </div>
+    <div class="home-service-box">
+      <%= image_tag 'home/ic-design.svg' %>
+      <h3>UX/UI Design</h3>
+      <p>Our design team works closely with you as an extension to your company. We’ll create a beautiful user-centered design that coincides with your brand identity and market position.</p>
+    </div>
+    <div class="home-service-box">
+      <%= image_tag 'home/ic-develop.svg' %>
+      <h3>Development & Release</h3>
+      <p>Our dev team works hand-in-hand with our designers to bring your user experience to life. We employ a flexible sprint process that drives rapid iteration and delivery.</p>
+    </div>
+  </div>
+</section>
+
+<section class="home-module quote-module">
+  <div class="quotes">
+    <%= render 'quote_magic' %>
+    <%= render 'quote_bmt' %>
+    <%= render 'quote_uma' %>
+  </div>
+</section>
+
+<div class="grey-module">
+  <section class="home-module recent-work">
+    <h2>Recent Work</h2>
+    <div class="works">
+      <%= render @projects %>
+    </div>
+  </section>
+</div>

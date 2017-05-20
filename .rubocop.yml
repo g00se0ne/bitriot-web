@@ -1,0 +1,65 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Include:
+  - "**/*.rake"
+  - "**/Rakefile"
+  Exclude:
+  - "vendor/**/*"
+  - "db/schema.rb"
+  - "spec/**/*.rb"
+  - "lib/tasks/*.rake"
+  - "**/Gemfile"
+  - "config/initializers/devise.rb"
+  DisplayCopNames: true
+  TargetRubyVersion: 2.3
+
+Rails:
+  Enabled: true
+
+Style/MethodDefParentheses:
+  Description: Checks if the method definitions have or don't have parentheses.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#method-parens
+  Enabled: false
+  EnforcedStyle: require_no_parentheses
+  SupportedStyles:
+  - require_parentheses
+  - require_no_parentheses
+
+Metrics/LineLength:
+  Description: Limit lines to 110 characters.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#80-character-limits
+  Enabled: true
+  Max: 110
+  AllowURI: true
+  URISchemes:
+  - http
+  - https
+
+Style/FrozenStringLiteralComment:
+  Description: "Don't require frozen string literal comments"
+  Enabled: false
+
+Style/Documentation:
+  Description: "Don't require documentation"
+  Enabled: false
+
+Lint/AssignmentInCondition:
+  Description: 'Use assignments in conditions if you want.'
+  Enabled: false
+
+Style/MultilineMethodCallIndentation:
+  Description: 'Checks indentation of method calls with the dot operator that span more than one line.'
+  Enabled: false
+
+Style/AlignHash:
+  Description: 'Align the elements of a hash literal if they span more than one line.'
+  Enabled: false
+
+Style/IndentHash:
+  Description: 'Use 2 spaces for indentation in a hash, relative to the first position after the preceding left parenthesis.'
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/routes.rb'

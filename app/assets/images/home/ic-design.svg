@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="42px" viewBox="0 0 32 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-design</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-235.867772%" y1="-453.176749%" x2="209.913534%" y2="2715.92715%" id="linearGradient-1">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-465.745008%" y1="-870.300815%" x2="413.214326%" y2="2302.41219%" id="linearGradient-2">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-229.587838%" y1="-1260.93249%" x2="213.473128%" y2="1950.0217%" id="linearGradient-3">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-444.257213%" y1="-1637.01255%" x2="420.347984%" y2="1515.85036%" id="linearGradient-4">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-231.519569%" y1="-2044.42274%" x2="211.599277%" y2="1116.2727%" id="linearGradient-5">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-442.419536%" y1="-2464.27284%" x2="422.272481%" y2="718.42281%" id="linearGradient-6">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-229.146506%" y1="-2843.69324%" x2="207.475357%" y2="325.75621%" id="linearGradient-7">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="-265.161458%" x2="339.515494%" y2="100%" id="linearGradient-8">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-86.8539566%" y1="-2878.67087%" x2="800.659285%" y2="345.567909%" id="linearGradient-9">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="341.742201%" y2="140.973038%" id="linearGradient-10">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-111.352539%" y1="0%" x2="106.868834%" y2="102.490234%" id="linearGradient-11">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-437.079582%" y1="-37.9253941%" x2="1950.28469%" y2="153.28903%" id="linearGradient-12">
+            <stop stop-color="#1D9AD7" offset="0%"></stop>
+            <stop stop-color="#A6449F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Homepage-Josh" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-3-Copy" transform="translate(-634.000000, -1623.000000)">
+            <g id="3-Up" transform="translate(101.000000, 1579.000000)">
+                <g id="ic-design" transform="translate(534.000000, 45.000000)">
+                    <g id="thin-0004_pencil_ruler_drawing">
+                        <g id="Group">
+                            <g id="Group-4">
+                                <polygon id="Shape" fill="url(#linearGradient-1)" fill-rule="nonzero" points="15.992674 4.75 22.9146491 4.75 22.9146491 3.25 15.992674 3.25"></polygon>
+                                <polygon id="Shape" fill="url(#linearGradient-2)" fill-rule="nonzero" points="15.992674 10.75 19.4536615 10.75 19.4536615 9.25 15.992674 9.25"></polygon>
+                                <polygon id="Shape" fill="url(#linearGradient-3)" fill-rule="nonzero" points="15.992674 14.75 22.9146491 14.75 22.9146491 13.25 15.992674 13.25"></polygon>
+                                <polygon id="Shape" fill="url(#linearGradient-4)" fill-rule="nonzero" points="15.992674 20.75 19.4536615 20.75 19.4536615 19.25 15.992674 19.25"></polygon>
+                                <polygon id="Shape" fill="url(#linearGradient-5)" fill-rule="nonzero" points="15.992674 26.75 22.9146491 26.75 22.9146491 25.25 15.992674 25.25"></polygon>
+                                <polygon id="Shape" fill="url(#linearGradient-6)" fill-rule="nonzero" points="15.992674 30.75 19.4536615 30.75 19.4536615 29.25 15.992674 29.25"></polygon>
+                                <polygon id="Shape" fill="url(#linearGradient-7)" fill-rule="nonzero" points="15.992674 36.75 22.9146491 36.75 22.9146491 35.25 15.992674 35.25"></polygon>
+                                <path d="M0.394197802,28.8613913 C0.394197802,29.0194783 3.94785641,39.2791304 3.94785641,39.2791304 C4.22535092,40.1913043 5.33774945,40.2723478 5.64342564,39.2794783 C5.64342564,39.2794783 9.25552234,29.0198261 9.25552234,28.8613913" id="Shape" stroke="url(#linearGradient-8)" stroke-width="1.5"></path>
+                                <polygon id="Shape" fill="url(#linearGradient-9)" fill-rule="nonzero" points="3.03134652 36.75 6.48922198 36.75 6.48922198 35.25 3.03134652 35.25"></polygon>
+                                <path d="M3.85207326,0.00139130435 C1.94228864,0.00139130435 0.394197802,1.5586087 0.394197802,3.47965217 L0.394197802,28.9650435 L9.25552234,28.9650435 L9.25552234,3.47965217 C9.25552234,1.5586087 7.7074315,0.00139130435 5.79764689,0.00139130435 L3.85207326,0.00139130435 Z" id="Shape" stroke="url(#linearGradient-10)" stroke-width="1.5"></path>
+                                <rect id="Rectangle-path" stroke="url(#linearGradient-11)" stroke-width="1.5" x="15.992674" y="0" width="13.8315018" height="40"></rect>
+                                <polygon id="Shape" fill="url(#linearGradient-12)" fill-rule="nonzero" points="5.75 28.9650435 5.75 6.93878261 4.25 6.93878261 4.25 28.9650435"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

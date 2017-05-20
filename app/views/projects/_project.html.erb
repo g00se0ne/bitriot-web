@@ -1,0 +1,9 @@
+<%= link_to project, class: 'work' do %>
+  <div class="overlay">
+    <div class="overlay-info">
+      <h3><%= project.name %></h3>
+      <p><%= project.subtitle %></p>
+    </div>
+  </div>
+  <%= image_tag project.homepage_image %>
+<% end %>

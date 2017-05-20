@@ -1,0 +1,58 @@
+<%= simple_form_for @contact do |f| %>
+  <div class="row">
+    <div class="one-third">
+      <%= f.input :name %>
+      <%= f.input :phone %>
+      <%= f.input :email %>
+    </div>
+    <div class="two-thirds">
+      <label class="required <%= !@contact.errors[:project_type].empty? ? 'error' : '' %>">How can we Help You?</label>
+      <ul class="custom-selector single" rel="#contact_project_type">
+        <% Contact::PROJECT_TYPES.each do |option| %>
+          <li><%= option %></li>
+        <% end %>
+      </ul>
+      <% if @contact.errors[:project_type] %>
+        <span class="error">
+          <%= @contact.errors[:project_type].join(', ') %>
+        </span>
+      <% end %>
+
+      <label class="required <%= !@contact.errors[:platforms].empty? ? 'error' : '' %>">Which platform(s)</label>
+      <ul class="custom-selector multi" rel="#contact_platforms">
+        <% Contact::PLATFORMS.each do |option| %>
+          <li><%= option %></li>
+        <% end %>
+      </ul>
+      <% if @contact.errors[:platforms] %>
+        <span class="error">
+          <%= @contact.errors[:platforms].join(', ') %>
+        </span>
+      <% end %>
+
+
+      <label class="required <%= !@contact.errors[:budget].empty? ? 'error' : '' %>">Please select a budget range</label>
+      <ul class="custom-selector single" rel="#contact_budget">
+        <% Contact::BUDGETS.each do |option| %>
+          <li><%= option %></li>
+        <% end %>
+      </ul>
+      <% if @contact.errors[:budget] %>
+        <span class="error">
+          <%= @contact.errors[:budget].join(', ') %>
+        </span>
+      <% end %>
+
+      <%= f.input :business_type, as: :hidden %>
+      <%= f.input :project_type, as: :hidden %>
+      <%= f.input :platforms, as: :hidden %>
+      <%= f.input :budget, as: :hidden %>
+    </div>
+  </div>
+  <div>
+    <%= f.input :body, label: 'Tell us about your company or project?', input_html: { rows: 6 } %>
+  </div>
+  <div>
+    <%= f.submit 'Let\'s Go', class: 'btn btn-dark btn-full' %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<header>
+  <div class="left-header">
+    <%= link_to image_tag('logo.svg', class: 'brand brand-light'), root_path  %>
+    <%= link_to image_tag('logo-blue-black.svg', class: 'brand brand-dark'), root_path  %>
+    <nav class="primary">
+      <%= link_to 'Home', root_path, class: selected_if_true(current_page?(root_path)) %>
+      <%= link_to 'Work', projects_path, class: selected_if_true(controller.controller_name == 'projects') %>
+      <%= link_to 'Services', services_path, class: selected_if_true(controller.controller_name == 'services') %>
+      <%= link_to 'Contact', new_contact_path, class: selected_if_true(controller.controller_name == 'contacts') %>
+    </nav>
+  </div>
+  <div class="right-header">
+    <%= image_tag 'ic-phone.svg' %>
+    1-(855)-BIT-RIOT
+  </div>
+  <a href="javascript:;" class="burger-menu"><span></span></a>
+</header>

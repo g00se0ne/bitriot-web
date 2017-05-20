@@ -1,0 +1,110 @@
+<%= page_title full_page_title: 'Bit Riot: Ruby on Rails, iOS, JavaScript design / development consultancy.' %>
+<% content_for :hero_class, 'landing-hero blue' %>
+<% content_for :body_class, 'no-subscribe' %>
+<% content_for :og_image, asset_url('gfx-rails-og.png') %>
+
+<% content_for :hero do %>
+  <div class="hero-blurb">
+    <h1>We Love San Jose</h1>
+  </div>
+  <%= image_tag 'gfx-city.svg', class: 'san-jose-landing-lockup'%>
+  <%= image_tag 'gfx-city.svg', class: 'san-jose-landing-lockup reflect'%>
+<% end %>
+
+<div class="san-jose-landing-team">
+  <section class="home-module">
+    <div class="container">
+      <h2>Meet Your Core Team</h2>
+      <div class="users">
+        <%= render User.all %>
+      </div>
+    </div>
+
+    <p>We're a scrappy, distributed team who understand what it takes to get a startup off the ground. Our team has been essential on dozens of launches. <%= link_to 'What can we help you build?', new_contact_path %></p>
+  </section>
+</div>
+
+<div class="technologies-container-san-jose-landing">
+  <section class="home-module">
+    <h2>WHAT YOU NEED FOR SILICON VALLEY</h2>
+    <p>We have what it takes to get your startup to thrive in Silicon Valley</p>
+  </section>
+</div>
+
+<section class="home-module services-module">
+  <div class="what-you-need">
+    <div class="row">
+      <div class="service-you-need">
+        <%= image_tag asset_path('landing/ic-ux.svg') %>
+        <h6>STRATEGY</h6>
+        <h6>FOR INSERT REASON</h6>
+      </div>
+      <div class="service-you-need">
+        <%= image_tag asset_path('landing/ic-ux.svg') %>
+        <h6>USER EXPERIENCE</h6>
+        <h6>FOR INSERT REASON</h6>
+      </div>
+      <div class="service-you-need">
+        <%= image_tag asset_path('landing/ic-responsive.svg') %>
+        <h6>RESPONSIVE DESIGN</h6>
+        <h6>FOR INSERT REASON</h6>
+      </div>
+      <div class="service-you-need">
+        <%= image_tag asset_path('landing/ic-prototype.svg') %>
+        <h6>PROTOTYPING</h6>
+        <h6>FOR INSERT REASON</h6>
+      </div>
+      <div class="service-you-need">
+        <%= image_tag asset_path('landing/ic-web-app.svg') %>
+        <h6>WEB APPLICATIONS</h6>
+        <h6>FOR INSERT REASON</h6>
+      </div>
+      <div class="service-you-need">
+        <%= image_tag asset_path('landing/ic-mobile-app.svg') %>
+        <h6>MOBILE APPS</h6>
+        <h6>FOR INSERT REASON</h6>
+      </div>
+      <div class="service-you-need">
+        <%= image_tag asset_path('landing/ic-user-testing.svg') %>
+        <h6>USER TESTING</h6>
+        <h6>FOR INSERT REASON</h6>
+      </div>
+      <div class="service-you-need">
+        <%= image_tag asset_path('landing/ic-content-management.svg') %>
+        <h6>CONTENT MANAGEMENT</h6>
+        <h6>FOR INSERT REASON</h6>
+      </div>
+      <div class="service-you-need">
+        <%= image_tag asset_path('landing/ic-colaboration.svg') %>
+        <h6>COLLABORATION</h6>
+        <h6>FOR INSERT REASON</h6>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="location-hero row">
+  <div class="location-hero-info">
+    <h2>San Jose is something</h2>
+    <p>Bang Muay Thai has dozens of affiliates all over the world. Bit Riot built a platform for all affiliates to get access to their curriculum on a rolling weekly basis. </p>
+    <p>Bang Muay Thai has dozens of affiliates all over the world. Bit Riot built a platform for all affiliates to get access to their curriculum on a rolling weekly basis. </p>
+  </div>
+  <div class="location-hero-image" style="background-image: url(<%= asset_url("landing/gfx-san-jose-circle-palms.jpg") %>)"></div>
+</div>
+
+<div class="landing-projects">
+  <h2>Rails Projects We <%= image_tag asset_path('ic-ruby.svg') %></h2>
+
+  <div class="project-list">
+    <%= render partial: 'projects/show', collection: @projects, as: :project, locals: {landing: true} %>
+  </div>
+</div>
+
+<div class="get-started">
+  <div class="container">
+    <div class="landing-contact">
+      <h2>Ready to get started?</h2>
+      <%= render 'contacts/form' %>
+    </div>
+  </div>
+</div>

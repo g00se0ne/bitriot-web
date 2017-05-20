@@ -1,0 +1,14 @@
+<%= page_title page_title: 'Services' %>
+<% content_for :hero do %>
+  <div class="hero-container">
+    <div class="hero-image" style="background-image: url('<%= image_path('gfx-chat.jpg') %>');"></div>
+  </div>
+  <div class="hero-blurb">
+    <h1>You Dream It, We Build It</h1>
+    <p>Our team of experienced designers and engineers have built many projects from scratch. </p>
+  </div>
+<% end %>
+
+<div class="services">
+  <%= render @services %>
+</div>

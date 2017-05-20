@@ -1,0 +1,24 @@
+<%= render partial: 'shared/subscribe' %>
+
+<footer>
+  <div class="left-header">
+    <%= link_to image_tag('logo-blue.svg', class: 'brand'), root_path  %>
+    <nav class="primary">
+      <%= link_to 'Home', root_path, class: selected_if_true(current_page?(root_path)) %>
+      <%= link_to 'Work', projects_path, class: selected_if_true(controller.controller_name == 'projects') %>
+      <%= link_to 'Services', services_path, class: selected_if_true(controller.controller_name == 'services') %>
+      <%= link_to 'Contact', new_contact_path, class: selected_if_true(controller.controller_name == 'contacts') %>
+      <%= link_to 'Ruby on Rails', '/ruby-on-rails' %>
+    </nav>
+  </div>
+  <div class="social-icons">
+    <%= link_to image_tag('footer/ic-social-twitter.svg'), 'https://twitter.com/bitriothq', target: '_blank' %>
+    <%= link_to image_tag('footer/ic-social-fb.svg'), 'https://facebook.com/bitriothq', target: '_blank' %>
+    <%= link_to image_tag('footer/ic-social-ig.svg'), 'https://instagram.com/bitriothq', target: '_blank' %>
+    <%= link_to image_tag('footer/ic-social-dribbble.svg'), 'https://dribbble.com/bitriothq', target: '_blank' %>
+  </div>
+</footer>
+
+<div class="sub-footer">
+  <p>&copy; Copyright <%= Time.now.year %>, Bit Riot, Inc</p>
+</div>

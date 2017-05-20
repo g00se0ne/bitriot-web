@@ -1,0 +1,17 @@
+<% index = local_assigns[:service_iteration].index + 1 %>
+<section class="service">
+  <div class="container">
+    <div class="service-text">
+      <div class="blurb">
+        <%= image_tag "services/0#{index}.svg", class: 'numeral' %>
+        <h2><%= service.name %></h2>
+        <p><%= service.short_description %></p>
+      </div>
+    </div>
+    <div class="service-icons">
+      <div class="technologies flex--technologies">
+        <%= render service.service_segments %>
+      </div>
+    </div>
+  </div>
+</section>

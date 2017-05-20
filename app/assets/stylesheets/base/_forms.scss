@@ -1,0 +1,205 @@
+fieldset {
+  background-color: lighten($base-border-color, 10%);
+  border: $base-border;
+  margin: 0 0 $small-spacing;
+  padding: $base-spacing;
+}
+
+input,
+select {
+  display: block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+label {
+  display: block;
+  font-weight: 300;
+  margin-bottom: $small-spacing / 2;
+  font-family: $heading-font-family;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  &.required::after {
+    content: "*";
+    color: $pink;
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+#{$all-text-inputs},
+select,
+select[multiple=multiple],
+textarea {
+  background-color: white;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  box-shadow: $form-box-shadow;
+  box-sizing: border-box;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  padding: $base-spacing / 1.5;
+  transition: border-color;
+  width: 100%;
+
+  &:hover {
+    border-color: darken($base-border-color, 10%);
+  }
+
+  &:focus {
+    border-color: $blue;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+}
+
+.field_with_errors {
+  input {
+    border-color: $pink;
+  }
+}
+
+.error {
+  color: $pink;
+  clear: both;
+  display: block;
+
+  &:not(label) {
+    font-size: 11px;
+  }
+}
+
+.input {
+  margin-bottom: $base-spacing / 2;
+  span {
+    font-size: 11px;
+    font-weight: 300;
+    color: $dark-gray;
+  }
+}
+
+.input.boolean {
+  input {
+    float: left;
+    margin-top: 7px;
+    margin-right: $small-spacing;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="search"] {
+  appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: $small-spacing / 2;
+}
+
+input[type="file"] {
+  padding-bottom: $small-spacing;
+  width: 100%;
+}
+
+select {
+  appearance: none;
+  background-color: white;
+}
+
+.custom-select {
+  position: relative;
+
+  &.no-label:after {
+    top: 8px;
+  }
+  &:after {
+    border: transparent;
+    border-radius: $base-border-radius;
+    bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    content: "";
+    background: asset-url('ic-arrow.svg') 50% 50% no-repeat;
+    background-size: 20px;
+    width: 20px;
+    pointer-events:none;
+    position: absolute;
+    right: $small-spacing;
+    top: 34px;
+    // &:hover {
+    //   border-color: darken($form-border-color, 10%);
+    // }
+    &:focus {
+      border-color: $pink;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+
+
+.input.date {
+  @include row();
+
+  select {
+    @include span-columns(4);
+  }
+}
+
+.image_preview {
+  position: relative;
+  img {
+    position: absolute;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    right: 0;
+  }
+}
+
+.input.hidden {
+  display: none;
+}
+
+.money-field {
+  position: relative;
+
+  input {
+    padding-right: 50px;
+  }
+
+  &:after {
+    content: '.00';
+    @include position(absolute, null 1px 1px null);
+    background-color: white;
+    width: 40px;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+    border-left: $base-border;
+    background: lighten($light-gray, 5%);
+  }
+}
+
+
+.terms-label {
+  margin-bottom: $base-spacing;
+  position: relative;
+
+  .error {
+    position: absolute;
+    top: $base-spacing;
+  }
+
+  input {
+    float: left;
+  }
+}
+

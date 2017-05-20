@@ -1,0 +1,16 @@
+<% index = local_assigns[:service_launch_iteration].index + 1%>
+<section class="service">
+  <div class="container">
+    <div class="service-text last-service-text">
+      <div class="blurb">
+        <%= image_tag "services/0#{index}.svg", class: 'numeral' %>
+        <h2>Launch</h2>
+        <p>See what some of our awesome clients are doing.</p>
+      </div>
+    </div>
+
+    <div class="works">
+      <%= render Project.all.limit(4) %>
+    </div>
+  </div>
+</section>

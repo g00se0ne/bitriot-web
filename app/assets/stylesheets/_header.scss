@@ -1,0 +1,132 @@
+header {
+  @include position(absolute, 1.5em null null 0);
+  @include size(100%, 48px);
+  display: flex;
+  font-family: $heading-font-family;
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  line-height: 48px;
+  padding: 0 5%;
+  z-index: 3;
+
+  .brand {
+    margin-right: $base-spacing * 1.5;
+  }
+}
+
+.left-header {
+  display: flex;
+
+  nav {
+    a {
+      color: $white;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-right: $base-spacing;
+      text-transform: uppercase;
+      transition: opacity 200ms ease;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 0.8;
+      }
+      &.selected {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.left-header nav {
+  @include media($mobile) {
+    @include position(fixed, 0 0 0 0);
+    padding-top: 120px;
+    background: white;
+    opacity: 0;
+    z-index: 9;
+    pointer-events: none;
+    transition: opacity 200ms ease;
+
+    a {
+      margin-left: 5%;
+      margin-bottom: $base-spacing;
+      opacity: 0 !important;
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+      color: $dark-gray;
+      opacity: 1;
+      width: 65%;
+      transition: color 500ms ease;
+    }
+  }
+}
+
+.brand-dark {
+  display: none;
+}
+
+@include media($mobile) {
+  body.nav-open {
+    .brand-light {
+      display: none;
+    }
+
+    .brand-dark {
+      z-index: 11;
+      position: relative;
+      display: block;
+    }
+
+    .left-header nav {
+      opacity: 1;
+      pointer-events: auto;
+
+      a {
+        opacity: 0;
+        transform: translateX(50px);
+        animation: nav-slide 500ms forwards;
+
+        &:hover {
+          color: $blue;
+        }
+
+        @for $i from 0 to 15 {
+          &:nth-child(#{$i}) {
+            animation-delay: #{($i * 100) + 200}ms;
+          }
+        }
+      }
+    }
+  }
+}
+
+.right-header {
+  color: $white;
+  font-weight: 100;
+
+
+  @include media($mobile) {
+    display: none;
+  }
+
+  img {
+    display: inline-block;
+    margin-right: $small-spacing;
+    vertical-align: middle;
+  }
+}
+
+@-webkit-keyframes nav-slide {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

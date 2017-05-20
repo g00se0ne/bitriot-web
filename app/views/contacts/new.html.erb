@@ -1,0 +1,15 @@
+<%= page_title page_title: 'Start Your Project Today' %>
+<% content_for :body_class, 'no-subscribe' %>
+<% content_for :hero do %>
+  <div class="hero-container">
+    <div class="hero-image" style="background-image: url('<%= image_path('gfx-chat.jpg') %>');"></div>
+  </div>
+  <div class="hero-blurb">
+    <h1>What can we build for you?</h1>
+  </div>
+<% end %>
+<div class="container">
+  <div class="contact">
+    <%= render 'form' %>
+  </div>
+</div>

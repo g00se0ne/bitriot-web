@@ -1,0 +1,15 @@
+<div class="project">
+  <div class="project-text">
+    <div class="blurb">
+      <h2><%= project.name %></h2>
+      <p><%= project.subtitle %></p>
+      <% if !landing %>
+        <div class="technologies">
+          <%= render project.technologies %>
+        </div>
+      <% end %>
+      <%= link_to 'Learn More', project, class: 'btn btn-hollow' %>
+    </div>
+  </div>
+  <div class="project-image" style="background-image: url('<%= project.homepage_image.url %>');"></div>
+</div>

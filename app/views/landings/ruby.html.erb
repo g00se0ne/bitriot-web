@@ -1,0 +1,74 @@
+<%= page_title full_page_title: 'Bit Riot: Ruby on Rails, iOS, JavaScript design / development consultancy.' %>
+<% content_for :hero_class, 'landing-hero' %>
+<% content_for :body_class, 'no-subscribe' %>
+<% content_for :og_image, asset_url('gfx-rails-og.png') %>
+
+<% content_for :hero do %>
+  <div class="hero-blurb">
+    <h1>We Love Ruby on Rails</h1>
+  </div>
+  <%= image_tag 'gfx-ruby.svg', class: 'landing-lockup', width: 420 %>
+<% end %>
+
+<div class="landing-team">
+  <section class="home-module">
+    <div class="container">
+      <h2>Meet Your Core Team</h2>
+      <div class="users">
+        <%= render User.all %>
+      </div>
+    </div>
+
+    <p>We're a boutique Ruby on Rails development agency who takes scrappy to the next level. We take on the role of your first few hires to get your startup off the ground. Our team has been essential on dozens of launches. <%= link_to 'What can we help you build?', new_contact_path %></p>
+  </section>
+</div>
+
+<div class="technologies-container-landing">
+  <section class="home-module">
+    <h2>Why Rails?</h2>
+  </section>
+</div>
+
+<section class="home-module services-module">
+  <div class="row">
+    <div class="home-service-box">
+      <%= image_tag 'home/ic-plan.svg' %>
+      <h3>Active Community</h3>
+      <p>Ruby on Rails is a mature framework with a rich, active community of developers. This means when you outgrow us, you'll have no trouble finding a Rails developer for your team.</p>
+    </div>
+    <div class="home-service-box">
+      <%= image_tag 'home/ic-design.svg' %>
+      <h3>Stability</h3>
+      <p>Rails has been battle tested by businesses small and large. Because of it's maturity you can focus on building products and not updating code because of breaking changes.</p>
+    </div>
+    <div class="home-service-box">
+      <%= image_tag 'home/ic-develop.svg' %>
+      <h3>Rapid Development</h3>
+      <p>Convention over configuration drives rapid development. Because there is a <em>"Rails way"</em> to do things, we're able to employ non-proprietary libraries to build software fast.</p>
+    </div>
+  </div>
+</section>
+
+<div class="landing-projects">
+  <h2>Rails Projects We <%= image_tag asset_path('ic-ruby.svg') %></h2>
+
+  <div class="project-list">
+    <%= render partial: 'projects/show', collection: @projects, as: :project, locals: {landing: true} %>
+  </div>
+</div>
+
+<section class="home-module quote-module landing-quote">
+  <div class="quotes">
+    <%= render 'homes/quote_magic' %>
+    <%= render 'homes/quote_bmt' %>
+    <%= render 'homes/quote_uma' %>
+  </div>
+</section>
+
+<div class="get-started">
+  <div class="container">
+    <div class="landing-contact">
+      <%= render 'contacts/form' %>
+    </div>
+  </div>
+</div>

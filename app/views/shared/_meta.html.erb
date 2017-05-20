@@ -1,0 +1,81 @@
+<meta property="og:site_name" content="Bit Riot: Ruby on Rails, iOS, JavaScript design / development"/>
+
+<% if yield(:og_type) %>
+  <meta property="og:type" content="<%= yield(:og_type) %>" />
+<% else %>
+  <meta property="og:type" content="website" />
+<% end %>
+
+<meta property="og:url" content="<%= request.original_url %>"/>
+<meta property="og:title" content="<%= og_title %>" />
+<meta property="og:description" content="<%= og_description %>" />
+<meta property="og:image" content="<%= og_image %>" />
+
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" content="bitriot.co">
+<meta name="twitter:title" content="<%= og_title %>">
+<meta name="twitter:description" content="<%= og_description %>">
+<meta name="twitter:creator" content="@bitriothq">
+<meta name="twitter:image" content="<%= og_image %>">
+<meta name="twitter:url" content="<%= request.original_url %>"/>
+<meta name="twitter:image" content="<%= og_image %>" />
+
+<meta name="description" content="<%= description %>">
+<meta name="duns" content="<%= duns %>">
+<meta name="founder" content="<%= founder %>">
+<meta name="foundingDate" content="<%= foundingDate %>">
+
+<script type="application/ld+json">
+{
+    "@context": "http:\/\/schema.org",
+    "@type": "Organization",
+    "name": "Bit Riot",
+    "alternateName": "Bit Riot, Inc",
+    "url": "https:\/\/bitriot.co\/",
+    "telephone": "1-855-BIT-RIOT",
+    "duns": "<%= duns %>",
+    "founder":{
+      "@type": "Person",
+      "name": "Josh Vandergrift"
+    },
+    "foundingDate": "<%= foundingDate %>",
+    "brand": {
+      "@type":"Brand",
+      "name":"Bit Riot",
+      "url":"https://bitriot.co",
+      "logo":"https://bitriot.co/logo.png"
+    },
+    "sameAs": [
+      "https://www.facebook.com/bitriothq",
+      "https://twitter.com/bitriothq",
+      "https://instagram.com/bitriothq",
+      "https://dribbble.com/bitriot"
+    ],
+    "logo": "https://bitriot.co/logo.png",
+    "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+1-855-BIT-RIOT",
+        "contactType": "sales"
+    }]
+}
+</script>
+
+<link rel="icon" href="<%= asset_url('favicon.ico') %>">
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '548269142017937'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=548269142017937&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->

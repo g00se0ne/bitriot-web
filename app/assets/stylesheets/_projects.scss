@@ -1,0 +1,251 @@
+$project-height: 500px;
+
+.project {
+  overflow: hidden;
+  height: $project-height;
+  position: relative;
+  border-bottom: $base-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &-text {
+    @include span-columns(6);
+    @include shift(1);
+    height: $project-height;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  &-image {
+    @include position(absolute, 0 0 0 65%);
+    @include size(35%, $project-height);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: 0 0 34px transparentize($dark-gray, 0.8);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &:nth-child(odd) {
+    background: $secondary-background-color;
+
+    .project-text {
+      @include shift(5);
+    }
+
+    .project-image {
+      @include position(absolute, 0 0 0 0);
+    }
+  }
+
+  .technologies {
+    padding-bottom: $base-spacing;
+    justify-content: center;
+
+    .tech {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    img {
+      height: 50px;
+      width: auto;
+    }
+  }
+
+  p {
+    margin-bottom: $base-spacing;
+  }
+
+  @include media($mobile) {
+    border-bottom: 4px solid $blue;
+    height: 620px;
+
+    .project-image {
+      @include shift(0);
+      @include position(relative, 0 0 null 0);
+      @include size(100%, 300px);
+      z-index: 1;
+    }
+
+    .technologies {
+      display: none;
+    }
+
+    .project-text,
+    .project-text:nth-child(odd) {
+      @include position(absolute, 320px 0 null 0);
+      @include size(100%, auto);
+      @include shift(0);
+      z-index: 2;
+      padding: 0 5%;
+    }
+
+    .btn {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.what {
+  @include row();
+  padding: ($base-spacing * 2) 0 0;
+  position: relative;
+  margin-bottom: $base-spacing;
+
+  &-image,
+  &-text {
+    @include shift(1);
+  }
+
+  &-image {
+    @include span-columns(6);
+    @include stack();
+  }
+
+  &-text {
+    @include span-columns(4);
+    @include stack();
+    position: relative;
+    height: $what-height;
+    display: flex;
+    align-items: center;
+
+    @include media($mobile) {
+      height: auto;
+      text-align: center;
+      display: block;
+    }
+  }
+}
+
+.how {
+  height: 620px;
+  margin-top: 30px;
+  position: relative;
+  background: $secondary-background-color;
+
+  &-text {
+    @include span-columns(5);
+    @include stack();
+    height: 620px;
+    display: flex;
+    align-items: center;
+
+    @include media($mobile) {
+      text-align: center;
+      display: block;
+      padding-top: $base-spacing * 2;
+      height: auto;
+      float: none;
+
+      .technologies {
+        .tech {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &-image {
+    @include position(absolute, 0 0 0 50%);
+    @include size(50%, $how-height);
+    background-size: auto $how-height;
+    // box-shadow: 0 0 34px transparentize($dark-gray, 0.8);
+    margin-top: -30px;
+    background-repeat: no-repeat;
+    @include stack();
+
+    img {
+      width: 100%;
+    }
+
+    @include media($mobile) {
+      @include position(static, auto auto auto auto);
+      display: block;
+      margin: 0 5%;
+      background-size: 100%;
+      float: none;
+      height: 430px;
+    }
+  }
+
+  &:after {
+    content: '';
+    @include position(absolute, 0 0 0 0);
+    @include size(100%, 100%);
+    box-shadow: inset 0 -30px 24px transparentize($dark-gray, 0.95);
+  }
+
+  @include media($mobile) {
+    height: auto;
+    border-bottom: 5px solid $blue;
+  }
+}
+
+.package-upsell {
+  @include row();
+  position: relative;
+  padding: $base-spacing;
+  background: transparentize($blue, 0.96);
+  box-shadow: inset 0 0 10px $white;
+  border: $base-border;
+  border-radius: 3px;
+  margin-bottom: $base-spacing * 2;
+
+  .package-info {
+    @include span-columns(7);
+
+    img {
+      float: left;
+      padding-right: $base-spacing;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .package-text {
+    display: flex;
+    align-items: center;
+    height: 96px;
+
+    .blurb {
+      width: 100%;
+    }
+  }
+
+  .cta {
+    @include position(absolute, 50% $base-spacing null null);
+    @include size(30%, auto);
+    transform: translateY(-50%);
+
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.our-work {
+  padding: ($base-spacing * 2) 0;
+  @include media($mobile) {
+    @include row();
+  }
+}
+
+.grey-module {
+  background: $secondary-background-color;
+}
